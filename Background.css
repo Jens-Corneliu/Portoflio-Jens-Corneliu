@@ -1,0 +1,24 @@
+
+
+
+body {
+  background-color: rgb(91, 146, 229);
+}
+
+/* overskrift h1 design */
+h1{
+background-color: darkturquoise; text-align: center; border: 10px;border-color:beige; border-style:solid;
+    
+}
+div {
+  width: 600px;
+    height:500px;
+  border: 0px solid green;
+  padding: 0px;
+  margin: 0px;
+  float: right;
+    background-color: rgb(255, 255, 255);
+}
+
+
+    
