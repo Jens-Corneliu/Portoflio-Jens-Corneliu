@@ -2,23 +2,59 @@
 
 
 body {
-  background-color: rgb(91, 146, 229);
+  background-color: rgb(34,139,34);
+    font-family: "calibri"; 
+        font-size: 20px;
 }
 
 /* overskrift h1 design */
 h1{
-background-color: darkturquoise; text-align: center; border: 10px;border-color:beige; border-style:solid;
-    
+background-color: darkturquoise; text-align: center; border: 10px;border-color:darkblue; border-style:solid;
+ 
 }
 div {
   width: 600px;
     height:500px;
   border: 0px solid green;
   padding: 0px;
-  margin: 0px;
-  float: right;
+  margin: auto;
+  float: center;
     background-color: rgb(255, 255, 255);
+}
+/*design af brødtekst på hovedsiden*/
+h2{
+    background-color:darkturquoise; text-align: center; border: 5px;border-color:darkblue; border-style:solid;
+    
+}
+/*centrerer billede*/
+
+.center{
+    
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+height=50%;
+}
+
+/*design af brødtekst på undersiden*/
+h3{
+    background-color:forestgreen; text-align: center; margin:100;
+    
 }
 
 
+
+
+h4{
+    background-color:darkseagreen; text-align: center; border: 5px;border-color:black; border-style:solid;
     
+}
+
+h5{
+    background-color:darkseagreen; text-align: center; border: 5px;border-color:black; border-style:solid;
+    
+}
+
+
+
