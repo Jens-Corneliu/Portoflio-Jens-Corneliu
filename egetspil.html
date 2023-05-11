@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Background.css">
+       <meta charset="UTF-8">
+       </head>
+
+<h1>
+Programering af eget spil
+</h1>
+
+<h3>Gruppen: Ea Witthøfft, Sara Høgh, Jens-Corneliu og Ludvig Erling</h3>
+
+<h2> Hvad er javascript?</h2>
+<h3> Javascript er et programeringsprog, som mest almindeligt bruges som en del af webbrowsere. 
+    Javascript bruges blandt andet til at lave spil som eksemplet herunder.</h3>
+
+    <center><img src="SnakeImage.png"center></center>
+<br>
+<h2> Hvad er formålet med forløbet</h2>
+<h3> I dette forløb skulle vi udvikle et spil ved hjælp af javascript. Dette spil skulle kunne virke med en makeymakey enhed, så 
+    spillet ville være mere fysisk. Det spil vi valgte at lave var en version af snake, som kom så tæt på den rigtige udgave som muligt. 
+    Dette betyder at spillet skulle inkludere en slange, som er kan bevæge sig op, ned, højre og venstre, æbler som slangen kan spise
+     og blive længere af og kolisionsfysik, som gør at det bliver en udfordring at vinde spillet. I følgende vil jeg gå over og forklare
+     de vigtigeste kodestumper der opbygger spillet.
+</h3>
+<h2>Forklaring af kode</h2>
+<h3>
+<img src="overblik2.png">
+<br>
+Først inddeles de forskellige dele af spillet i deres egne filer, for at gøre det at realisere det endelige produkt mere overskueligt. 
+Der blev valgt at inddele snake, fruit, index.html og sketch. 
+<br>
+<br>
+Snake har til opgave at give spilleren kontrol over slangen, opdatere dens koordinater, gøre mulighed for at slangen bliver
+ større når den spiser en frugt og vise spilleren, at de har tabt når
+ <br>
+ slangen rører sig selv eller et af murene.
+<br>
+<br>
+Fruit har til opgave at give frugten tilfældige koordinater og opdatere numsegment samt dens egne koordinater når slangen spiser frugten
+, så slangen bliver længere og frugten får nye
+<br>
+koordinater.
+<br>
+<br>
+Index.html har til opgave at sammenflette de forskellige dele af spillet, så det kan spilles som et helt spil.
+<br>
+<br>
+Sketch har til opgave at bestemme slangens fart, dens startposition, udseende af spillet samt tjekke for om slangen rører en frugt
+eller en mur ved at opdatere dens koordinater.
+<br>
+<br>
+</h3>
+<h4>[FRUGT]</h4>
+
+<h3>
+<img src="fruitlinje1til7.png">
+<br>
+Vi starter i den del af spillet, som handler om frugten.
+<br>
+Fra linje 1 til 7 defineres først x og y koordinaterne for frugten, dernæst bliver en funktion der har til opgave at opdatere frugtens
+koordinater opstillet. I denne funktion gør floor,
+<br>
+så resultatet altid bliver et helt tal. random gør så et "tilfældigt" tal mellem 0 og
+ 1 bliver dannet. (10,(width-10)/10))*10 gør så frugtens x koordinat bliver inden for spillets rammer
+ <br>
+ (skifter du width ud med height får du funktionen for frugtens y koordinat).
+ <br>
+ <br>
+<img src="fruitlinje9til19.png">
+<br>
+Funktionen tegner frugten samt gør at dens x og y koordinater er xFruit og yFruit. Udover dette gør funktionen også så når slangen rører
+frugten så bliver den længere ved hjælp
+<br>
+af unshift kommandoen, som gør at der bliver lagt et ekstra element til listerne xCor og yCor. 
+Der bliver også lagt et ekstra element til numSegments samt en opdatering til frugtens 
+<br>
+position. 
+</h3>
+<h4>
+[SNAKE]
+</h4>
+<h3>
+<img src="snakelinje1til4.png">
+<br>
+Linje 1 til 4 i koden for slangen sætter 3 variabler op der bliver brugt senere i koden: var dir='right', som viser start retningen for
+ slangen, var xCor=[] og var yCor=[] som danner en liste 
+ <br>
+ for slangens x og y koordinater.
+ <br>
+ <br>
+ <img src="snakelinje7til30.png">
+ <br>
+Funktionen Keypressed() gør så når et af piletasterne er trykket, så bevæger slangen sig i retningen tasten viser. Funktionen gør også 
+slangen ikke kan gå den direkte modsatte vej
+<br>
+af sin nuværende retning med dir !='modsat retning' kommandoen.
+<br>
+<br>
+<img src="snakelinje32til55.png">
+<br>
+Funktionen updateSnakeCoordinates() danner et forloop, hvor i starter på 0 og får lagt 1 til hvis i er lig numSegments minus 1. 
+
+Dette bruges i xCor og yCor variablerne for at opdatere
+<br>
+dem når slangen bevæger sig. Inden for funktionen er også hvordan slangen skal reagere når piletasterne trykkes. I tilfælde med 'right'
+ændres kun slangens x koordinater,
+<br>
+hvilket gøres ved at sige at slangens nuværende koordinater er lig med slangens forrige koordinater lagt sammen med slangens fart (diff).
+<br>
+<br>
+<img src="snakelinje57til77.png">
+<br>
+Funktionerne deathLoop og death er til for at slutte spillet hvis spilleren laver en fejl. I deathLoop laves et forloop så
+kommandoerne nedenunder altid bliver set igennem når 
+<br>
+spillet startes. I loopet  gives tre kommandoer: hvis yCor er under 1 eller over 400, så dør slangen, hvis xCor er under 1 
+eller over 400, så dør slangen, hvis slangen rører sig
+<br>
+selv, du gættede rigtigt slangen dør. Nu kommer death funktionen ind i billedet. Death bliver kaldt hver gang slangen gør et
+ af ovenstående, hvilket gør så en boks med stringen "game over"
+<br>
+ popper op på skærmen. Noloopet i slutningen af funktionen gør så funktionen ikke behøver at loope igen og igen.
+</h3>
+
+<h4>
+   [SKETCH] 
+</h4>
+<h3>
+<img src="sketchlinje1til6.png">
+<br>
+I de første linjer kode af sketch dokumentet defineres 4 variabler: xPos, yPos, numSegments og diff. xPos og yPos bruges til at give
+ slangen en startposition når man starter spillet. 
+ <br>
+ numSegments er bruges blandt andet til at definere slangens længde i segmenter, som i
+ dette tilfælde er 10. diff bruges til at definere slangens hastighed.
+<br>
+<br>
+<img src="sketchlinje8til21.png">
+<br>
+Funktionen setup indeholder 5 kommandoer: createCanvas(),frameRate(),strokeWeight(),updateFruitCoordinates() og et forloop. 
+CreateCanvas giver dig her et visuelt område på 400x400. 
+<br>
+FrameRate er til for at justere hvor mange frames der bliver vist per sekund, i dette tilfælde er det 15. StrokeWeight er til for at 
+bestemme tykkelsen af de forskellige objekter der optræder i spillet, 
+<br>
+altså frugten og slangen. UpdateFruitCoordinates kalder på funktionen updateFruitCoordinates(), så frugten spawner når spillet begynder.
+Foorloopet bestemmer hvor slangen spawner ved hjælp 
+<br>
+af variablerne xPos,yPos og diff.
+<br>
+<br>
+<img src="sketchlinje23til36.png">
+<br>
+Funktion draw har primært til opgave at tegne baggrunden samt slangen. Den har også til opgave at kalde på funktionerne 
+updateSnakeCoordinates, checkForFruit og deathloop så skærmen
+<br>
+kan omtegnes hver gang der sker noget.
+</h3>
+<h4>
+[INDEX.HTML]
+</h4>
+<h3>
+<img src="indexlinje10til12.png">
+<br>
+Inde på html siden linkes alle javascript delene fruit, snake og sketch, så spillet kan fungere.
+</h3>
+<h2>
+    Flowchart af spil
+</h2>
+<h3>
+    Herunder ses et flowchart af spillet, så de forskellige funktioner bliver lettere at visualisere.
+</h3>
+<center><img src="Flowchartafsnake.png"></center>
+
+<h2>
+            
+            
+            <a href="index.html"> Til forsiden </a>
+                </h2>
+            <h2>
+            
+             
+            <a href="Om%20mig.html"> Til The Jens Zone </a>
+            
+            </h2>
+    <h2>
+   
+       
+        <a href="Om%20mit%20program.html">Til portfolie</a>
+    </h2>
+
+</html>

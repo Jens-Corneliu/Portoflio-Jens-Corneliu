@@ -11,7 +11,7 @@
     <h1> Astro Pi</h1>
          <h3> Gruppen: William Røpke, Rasmus Hey, Jens-Corneliu, Frederik Lykke, Tjalfe Karoli og Malde Munkholm</h3>
          <h4>
-         <img src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/325067883_677647037481215_5817257585757653350_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HCG6dVZsHsMAX-E7jrY&_nc_ht=scontent-cph2-1.xx&oh=03_AdRcxsk8uRz_ovopmVzXu40MW1eLPcMTu7Mnld7wOgo81A&oe=63EBD1A7">
+         <img src="astropi.svg"wdth="300px"height="300px">
              </h4>
     <h2> hvad går forløbet Astro Pi ud på?</h2>
     <h3> I forløbet om Astro Pi har vi igennem ESA &#40;European Space agency&#41; og deres program MISSION SPACE LAB fået lov til at designe et projekt vi kunne tænke os at lave gennem deres raspberry pi computere instaleret på ISS &#40;internatiol space station&#41; projektet startede med en design og idegenerering. Idegenereringen endte ud i en ansøgning til ESA om udtagelse til at kører projektet gennem de to computere på ISS. Inden da har vi dog, gennem raspberry pi computere skolen har testet og afprøvet vores dataindsamling og data behandling.
@@ -21,7 +21,7 @@
    
         <h2> Afslutning</h2>
          <h4>
-         <img src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/324961089_1146917862629808_4920057206651349204_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=cnf9CThjuo8AX9O4rGX&_nc_ht=scontent-cph2-1.xx&oh=03_AdRWd49-C8QoE9KjX5U7Z9rC1DJ4e0Q4AR1kKvLaSIdrlQ&oe=63EBB752">
+         <img src="beskrivelse1.jpg">
              </h4>
          <h3> som afslutning på hele forløbet er vi blevet stillet disse spørgsmål, som reaten af denne side ville svare på</h3>
     
@@ -33,8 +33,8 @@
          </h2>
          <h3>ESA har opsat disse speciffikationer</h3>
          <h4>
-         <img src=https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/322590230_878779383362363_4302393418239304236_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HTpLxJHvSZ0AX9ijOgr&_nc_ht=scontent-cph2-1.xx&oh=03_AdTS6DIGdJlFgYNzALTGoNHrsvE2ePRFqKBCtFAImClUZg&oe=63EBB4DB>
-         <img src=https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/322593998_1502285523514765_6816310270996754944_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=j9HrDYRdTGEAX8aUDzb&_nc_ht=scontent-cph2-1.xx&oh=03_AdS-OVCkGSnpDCytz3_mkpdM4XMqPBTwshQmeYwsC4hgnA&oe=63EBB75D>
+         <img src=specifikationer1.jpg>
+         <img src=specifikationer2.jpg>
              
              </h4>
          <br>
@@ -64,20 +64,20 @@
          <h3> 
          De første fire linjer af kode (linje 1-6) er til for at importere data som Rasberry-pi enheden indsamler. F.eks. importerer “from sense_hat import SenseHat” den data sense_hat’en indsamler som for eksempel temperatur, tryk og fugtighed. “import subprocess” bliver brugt importerer extensions, hvilket gør så du kan skrive nye koder du ellers ikke ville kunne skrive. I dette tilfælde gør “import subprocess” så en extension fra pakken “gpiozero” bliver integreret. Denne extension er “CPUTemperature sense”, som måler temperaturen af CPU’en, der så ved hjælp af “CPUTemperature sense = SenseHat()” tilføjer dataen til resten af dataene fra sense_hat’en.
            <br>
-             <img src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/325710869_697578071853959_3558340512213811102_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=QFHm7rrQ4fkAX_v7EoI&_nc_ht=scontent-cph2-1.xx&oh=03_AdQoQIbkisnPNj7Nf80ctV6edQtgyAQF95dRQ3diglBEPA&oe=63EBC400">
+             <img src="linje1til6.jpg">
             <br> 
          De næste tre linjer kode (linje 9-11) beskriver tiden, hvor forsøget starter “Start_time = datetime.datetime.now()”, hvor den noterer hvilket tidspunkt på dagen forsøget starter på ved hjælp af “datetime.datetime.now()”. “now_time = datetime.datetime.now()” er til for at man senere i koden, ved hjælp af et while statement (linje 14), kan stoppe forsøget når “duration” er lig med 0. “duration = datetime.timedelta(seconds=60)” bliver brugt til at styre forsøgets varighed i linje 14.(der hvor der står datetime.timedelta(seconds=10) skal der stå 60, da 10 var brugt til test fasen)
           <br>
-             <img src=https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/319762000_6125432167508349_270870663087515678_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=kakm9kEK0ksAX-u3LUd&_nc_oc=AQncC5Zd0JcxlzaaGl3JFCfEPTprFiXkXmyEMP5vRpTmG_DESRLb1UVAQsfh2MTRwPY&_nc_ht=scontent-cph2-1.xx&oh=03_AdQMtpZJ5ZqVizdZ4v-UzDm-q8G1tSOpUjwfz2XFUNThWw&oe=63EBB5D8>
+             <img src=linje9til12.jpg>
              <br>
         
          Linje 17-22 gør brug af en “while true” kommando, som fortæller programmet at mens “now_time” har en lavere værdi end “start_time” plus “duration”, så skal Astro-pi enheden indsamle data for “temperatur”, “tryk” og “fugtighed”. Dette fungerer på den måde at duration formindskes til at den rammer værdien 0, hvilket gør så “now_time &gt; start_time + duration” ikke længere er sandt, som så gør at Astro-pi’en ikke længere indsamler data. “now_time = datetime.datetime.now()” bliver opdateret efter dataen er indsamlet.
     <br>
-             <img src=https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/324786944_696508752150500_1825572964310782040_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=-7CjLWry71EAX_lwzP5&_nc_ht=scontent-cph2-1.xx&oh=03_AdTwdxqhpQPjbf8Y2E2ySP0emDPh_4yyI8rLrk6lSiTfew&oe=63EBDEE3>
+             <img src=linje17til23.jpg>
              <br>
              Linje 47-54 giver programmet kravene: hvis fugtigheden og temperaturen for en plante er over minimum-værdien og under maximum-værdien, så printes plantens navn for at vise, at planten kan leve på stationen.
              <br>
-            <a> <img src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/325152398_570787584943768_4000167403466382215_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=G6x5qQFSyu4AX-y15fj&_nc_ht=scontent-cph2-1.xx&oh=03_AdRCCVhC-o266ZtH6a4gHdl_pp0PEZqRo8l13_5CvNqNjw&oe=63EBE761"width="500px"></a>
+            <a> <img src="linje47til54.jpg"width="500px"></a>
          </h3>
          
          
@@ -93,7 +93,7 @@
          </h3>
          <br>
          <h2> Flowchart af programmet</h2>
-         <a><img src="https://scontent-cph2-1.xx.fbcdn.net/v/t1.15752-9/324970104_1216634239262842_5962469127710536839_n.png?stp=dst-png_p1080x2048&_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=BJIRHsbR-tEAX9Kn1Vr&_nc_ht=scontent-cph2-1.xx&oh=03_AdR5_w7jKY2ajYF4GtE0dYOBpEE4CbnVDnHzX8l1JMJMiA&oe=63EBE44A"width="850px"height="1000px"float=auto></a>
+         <center><a><img src="flowchart.jpg"width="850px"height="1000px"float=auto></a></center>
          
        
          <h3>
